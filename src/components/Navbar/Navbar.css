@@ -1,0 +1,50 @@
+nav {
+    padding: 10px 60px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+a:hover {
+    color: #ffd700;
+}
+
+nav .reset-btn{
+    cursor: pointer;
+    color: #fff803;
+    font-weight: 700;
+}
+
+nav .reset-btn:hover{
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    nav {
+        padding: 10px 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    nav {
+        padding: 10px 15px;
+    }
+}

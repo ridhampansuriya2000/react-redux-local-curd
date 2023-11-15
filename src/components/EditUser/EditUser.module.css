@@ -1,0 +1,62 @@
+/* EditUser.module.css */
+.editUserContainer {
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.userForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formGroup {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup label{
+    display: flex;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.inputField {
+    padding: 0px 10px;
+    height: 40px;
+    font-size: 16px;
+    border: 2px solid #3498db;
+    border-radius: 4px;
+    transition: border-color 0.3s ease-in-out;
+    margin-top: 5px;
+}
+
+.inputField:focus {
+    border-color: #2980b9;
+}
+
+.saveButton {
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+.saveButton:hover {
+    background-color: #2980b9;
+}

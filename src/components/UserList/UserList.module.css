@@ -1,0 +1,88 @@
+/* UserList.module.css */
+.userListContainer {
+    padding: 0px 3vw;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.userListContainer h2 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.userListTableContainer{
+    width: 100%;
+    overflow-x: auto;
+}
+
+.userTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.actionLink {
+    color: #007bff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.actionLink:hover {
+    text-decoration: underline;
+}
+
+.deleteAction {
+    font-weight: 600;
+    color: #ff0000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.deleteAction:hover {
+    color: #b30000;
+    text-decoration: underline;
+}
+
+/* Add this CSS to your existing styles or create a new CSS file */
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination span {
+    margin: 0 10px;
+}
+
+.pagination button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.pagination button:hover {
+    background-color: #2980b9;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+

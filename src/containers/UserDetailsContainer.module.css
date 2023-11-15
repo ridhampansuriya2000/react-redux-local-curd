@@ -1,0 +1,39 @@
+/* UserDetailsContainer.module.css */
+
+.userDetailsContainer {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow-x: scroll;
+}
+
+.userDetailsTitle {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.userInfo {
+    margin-bottom: 10px;
+}
+
+.backButton {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.backButton:hover {
+    background-color: #0056b3;
+}
+
+.backButtonContainer {
+    margin-top: 20px;
+}

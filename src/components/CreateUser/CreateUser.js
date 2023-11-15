@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import styles from './CreateUser.module.css';
-import {addUserAPI} from "../services/api"; // Import your CSS module
-
+import {addUserAPI} from "../../services/api";
 const CreateUser = () => {
     const [formData, setFormData] = useState({
         username: '',

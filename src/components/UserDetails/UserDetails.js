@@ -1,7 +1,6 @@
-// UserDetails.js (Component)
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './UserDetails.module.css'; // Import your CSS module
+import styles from './UserDetails.module.css';
 
 const UserDetails = ({ user }) => {
     if (!user) {

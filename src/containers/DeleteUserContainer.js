@@ -1,9 +1,24 @@
 // DeleteUserContainer.js
-import React from 'react';
+import React, {useEffect} from 'react';
+import { useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
 import DeleteUser from '../components/DeleteUser';
+import {fetchUser} from "../services/api";
+import { fetchUser as fetchUserAction } from '../redux/actions';
 
-const DeleteUserContainer = ({ user }) => {
+const DeleteUserContainer = ({ match, user, fetchUserAction }) => {
+    const userId = match.params.userId;
+    const history = useHistory();
+
+    useEffect(() => {
+        fetchUser(userId).then((data) => {
+            // if(data.message){
+            //     history.push('/');
+            // }
+            fetchUserAction(data);
+        });
+    }, [userId, fetchUserAction]);
+
     if (!user) {
         return <div>Loading...</div>;
     }
@@ -17,4 +32,4 @@ const mapStateToProps = (state) => {
     };
 };
 
-export default connect(mapStateToProps)(DeleteUserContainer);
+export default connect(mapStateToProps,{fetchUserAction})(DeleteUserContainer);

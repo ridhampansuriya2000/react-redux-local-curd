@@ -7,7 +7,8 @@ import UserDetails from '../components/UserDetails';
 import styles from './UserDetailsContainer.module.css';
 
 const UserDetailsContainer = ({ match, user, fetchUserAction }) => {
-    const userId = parseInt(match.params.id, 10);
+    // const userId = parseInt(match.params.userId, 10);
+    const userId = match.params.userId;
 
     useEffect(() => {
         fetchUser(userId).then((data) => {

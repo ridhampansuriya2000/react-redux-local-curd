@@ -1,9 +1,8 @@
-// DeleteUser.js
 import React from 'react';
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import { deleteUserAPI } from '../services/api';
-import { deleteUser as deleteUserAction } from '../redux/actions';
+import { deleteUserAPI } from '../../services/api';
+import { deleteUser as deleteUserAction } from '../../redux/actions';
 import styles from './DeleteUser.module.css';
 
 const DeleteUser = ({ user, deleteUserAction }) => {

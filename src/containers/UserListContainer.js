@@ -4,14 +4,16 @@ import { connect } from 'react-redux';
 import { fetchUsers } from '../services/api';
 import { fetchUsers as fetchUsersAction } from '../redux/actions';
 import UserList from '../components/UserList';
-import styles from './UserListContainer.module.css';
 
 const UserListContainer = ({ users, fetchUsersAction }) => {
+
+    let isRendered = JSON.parse(localStorage.getItem('onceRender'));
+
     useEffect(() => {
         fetchUsers().then((data) => {
             fetchUsersAction(data);
         });
-    }, [fetchUsersAction]);
+    }, [fetchUsersAction, isRendered]);
 
     return <UserList users={users} />;
 };

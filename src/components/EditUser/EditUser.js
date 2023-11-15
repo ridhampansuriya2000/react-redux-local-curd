@@ -1,10 +1,7 @@
-// EditUser.js (Component)
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { editUser } from '../redux/actions';
 import styles from './EditUser.module.css';
-import {editUserAPI} from "../services/api"; // Import your CSS module
+import {editUserAPI} from "../../services/api";
 
 const EditUser = ({ user }) => {
     const [formData, setFormData] = useState({

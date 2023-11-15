@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './UserList.module.css'; // Import your CSS module
+import styles from './UserList.module.css';
 
 const UserList = ({ users }) => {
-    const itemsPerPage = 2;
+    const itemsPerPage = 10;
     const [currentPage, setCurrentPage] = useState(1);
 
     // Calculate the index range for the current page

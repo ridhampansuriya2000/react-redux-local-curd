@@ -1,4 +1,4 @@
-// reducers.js
+
 import { combineReducers } from 'redux';
 import {
     FETCH_USERS,
@@ -8,18 +8,21 @@ import {
     DELETE_USER,
 } from './actions';
 
-const usersReducer = (state = [], action) => {
+let users = [];
+
+const usersReducer = (state = users, action) => {
     switch (action.type) {
         case FETCH_USERS:
             return action.payload;
         case ADD_USER:
-            return [...state, action.payload];
+            let user = { userId : new Date().getTime(), ...action.payload}
+            return [...state, user];
         case EDIT_USER:
             return state.map((user) =>
-                user.id === action.payload.id ? action.payload : user
+                user.userId === action.payload.userId ? action.payload : user
             );
         case DELETE_USER:
-            return state.filter((user) => user.id !== action.payload);
+            return state.filter((user) => user.userId !== action.payload);
         default:
             return state;
     }

@@ -21,7 +21,7 @@ const Navbar = ({ users, fetchUsersAction }) =>{
 
     const handleLocalStorage = () =>{
         let onceRender = JSON.parse(localStorage.getItem('onceRender'));
-        !!!onceRender && localStorage.setItem('users',JSON.stringify(users));
+        !!!onceRender && localStorage.setItem('users',JSON.stringify(mockUsersData));
         localStorage.setItem('onceRender',JSON.stringify(true));
     }
 
